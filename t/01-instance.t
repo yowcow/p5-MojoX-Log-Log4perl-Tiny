@@ -14,7 +14,8 @@ my $conf = qq{
     log4perl.logger.Fuga = ERROR, File
     log4perl.appender.File = Log::Log4perl::Appender::File
     log4perl.appender.File.filename = $logfile
-    log4perl.appender.File.layout   = SimpleLayout
+    log4perl.appender.File.layout   = PatternLayout
+    log4perl.appender.File.layout.ConversionPattern = [\%p] %C - %m%n
 };
 
 Log::Log4perl::init(\$conf);
@@ -84,8 +85,8 @@ subtest 'Test logging' => sub {
         my $content = slurp_file($logfile);
 
         is $content, <<END;
-ERROR - BBBBB
-ERROR - BBBBB
+[ERROR] main - BBBBB
+[ERROR] main - BBBBB
 END
     };
 };
@@ -101,13 +102,13 @@ subtest 'Test history' => sub {
     my $content = slurp_file($logfile);
 
     is $content, <<END;
-ERROR - BBBBB
-ERROR - BBBBB
-ERROR - CCCC1
-ERROR - CCCC2
-ERROR - CCCC3
-ERROR - CCCC4
-ERROR - CCCC5
+[ERROR] main - BBBBB
+[ERROR] main - BBBBB
+[ERROR] main - CCCC1
+[ERROR] main - CCCC2
+[ERROR] main - CCCC3
+[ERROR] main - CCCC4
+[ERROR] main - CCCC5
 END
     is @{ $logger->history }, 3;
     cmp_deeply $logger->history,
