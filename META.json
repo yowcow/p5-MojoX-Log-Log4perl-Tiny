@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Minimalistic Log4perl adapter for Mojolicious",
    "author" : [
       "yowcow <yowcow@cpan.org>"
    ],
@@ -42,11 +42,16 @@
       },
       "runtime" : {
          "requires" : {
+            "Log::Log4perl" : "0",
+            "Mojolicious" : "0",
             "perl" : "5.008001"
          }
       },
       "test" : {
          "requires" : {
+            "File::Spec" : "0",
+            "File::Temp" : "0",
+            "Test::Deep" : "0",
             "Test::More" : "0.98"
          }
       }

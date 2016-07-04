@@ -68,8 +68,8 @@ MojoX::Log::Log4perl::Tiny - Minimalistic Log4perl adapter for Mojolicious
 
 =head1 DESCRIPTION
 
-MojoX::Log::Log4perl::Tiny allows you to replace default Mojolicious logging Mojo::Log with
-your existing Log::Log4perl::Logger.
+MojoX::Log::Log4perl::Tiny allows you to replace default Mojolicious logging C<Mojo::Log> with
+your existing C<Log::Log4perl::Logger> instance.
 
 =head1 METHODS
 
@@ -89,7 +89,7 @@ Minimum log level for logging.  Default: "debug"
 
 =item * max_history_size
 
-Max history size for "exception.html.ep".  Default: 5
+Max history size for logs to be shown on "exception.html.ep".  Default: 5
 
 =back
 
