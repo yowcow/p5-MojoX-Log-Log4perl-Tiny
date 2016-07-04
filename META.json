@@ -57,6 +57,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/yowcow/p5-MojoX-Log-Log4perl-Tiny/issues"
+      },
+      "homepage" : "https://github.com/yowcow/p5-MojoX-Log-Log4perl-Tiny",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/yowcow/p5-MojoX-Log-Log4perl-Tiny.git",
+         "web" : "https://github.com/yowcow/p5-MojoX-Log-Log4perl-Tiny"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:YOWCOW",
    "x_serialization_backend" : "JSON::PP version 2.27400"

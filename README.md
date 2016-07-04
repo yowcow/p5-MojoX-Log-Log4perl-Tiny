@@ -1,4 +1,4 @@
-
+[![Build Status](https://travis-ci.org/yowcow/p5-MojoX-Log-Log4perl-Tiny.svg?branch=master)](https://travis-ci.org/yowcow/p5-MojoX-Log-Log4perl-Tiny)
 # NAME
 
 MojoX::Log::Log4perl::Tiny - Minimalistic Log4perl adapter for Mojolicious
